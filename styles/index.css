@@ -60,12 +60,20 @@ html,body{
     background-color:rgb(24, 250, 24);
 }
 .card .front img{
-    width: 200px;
-    
-} 
+    width: 200px;}
 .card .back img{
     width: 200px;
+    animation: imgZoom 3.5s ease infinite;
+    animation-direction: reverse;
+    animation-fill-mode: none;   
+} 
+@keyframes imgZoom {
+	0% {transform: scale(1) rotate(0deg);}
+	50% {transform: scale(1.1) rotate(15deg);}
+	100% {transform: scale(1) rotate(0deg);}
 }
+
+
 .card .back{
     display: flex;
     justify-content: center;
